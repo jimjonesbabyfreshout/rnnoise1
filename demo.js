@@ -20,7 +20,7 @@ function updateMusicClip() {
   if (noise_level_id != 5) name = name + noise_types[noise_type_id];
   name = name + noise_levels[noise_level_id];
   var extension = "opus";
-  if (!audio.canPlayType('audio/ogg; codecs="opus"')) extension = "mp3";
+  if (!audio.canPlayType('audio/mp3; codecs="opus"')) extension = "mp3";
   /*console.log("extension = " + extension);*/
   name = name + "." + extension;
   var playing = !(audio.paused);
@@ -41,9 +41,9 @@ function updateMusicClip() {
                            }, true);
   
   audio.load();
-  /*console.log(audio.canPlayType('audio/ogg; codecs="opus"'));
+  console.log(audio.canPlayType('audio/mp3; codecs="opus"'));
   console.log(audio.canPlayType("audio/mpeg;"));
-  console.log(audio.canPlayType('audio/wav; codecs="1"'));*/
+  console.log(audio.canPlayType('audio/wav; codecs="1"'));
 }
 
 function setLevel(level_id, item) {
