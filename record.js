@@ -1,4 +1,3 @@
-
 var MIN_DB_LEVEL = -110;
 var MAX_DB_LEVEL = -40;
 
